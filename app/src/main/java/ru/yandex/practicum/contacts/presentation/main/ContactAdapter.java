@@ -50,7 +50,9 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
         return differ.getCurrentList().size();
     }
 
-
+    public void setItems(List<ContactUi> items) {
+        differ.submitList(items);
+    }
 
     public void setItems(List<ContactUi> items, @NonNull Runnable callback) {
         differ.submitList(items, callback);
